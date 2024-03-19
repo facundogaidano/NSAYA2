@@ -1,0 +1,397 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+}
+
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+/* Reset CSS */
+
+/* PRIMARY STUFF */
+
+@font-face {
+  font-family: DeaconFlock;
+  src: url(/assets/fonts/DeaconFlock.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(90deg, hsla(0, 0%, 8%, 1) 0%, hsla(60, 17%, 14%, 1) 100%);
+}
+
+.container {
+  display: grid;
+  color: white;
+  text-align: center;
+  grid-template-columns: 0.25fr 1fr 1fr;
+  grid-template-rows: 120px 1fr 50px; /* Updated line */
+  grid-template-areas: 
+    "header header header"
+    "content content content"
+    "footer footer footer";
+}
+
+/* HEADER STUFF */
+
+.header {
+  background: linear-gradient(90deg, #1f1f18 0%, rgba(255, 255, 255, 0) 100%);
+  grid-area: header;
+  font-family: 'DeaconFlock';
+  align-items: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* LOGO  */
+.logo {
+  justify-self: start;
+  margin-left: 5%;
+  font-size: 5rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+  font-size: 5.5rem;
+  text-shadow: rgba(0, 0, 0, 0.37) -8px 8px;
+}
+
+/* MENU  */
+.menu ul,
+.menu li {
+  font-size: 16px;
+  list-style-type: none;
+}
+
+.menu, .mobile-menu {
+  align-self: center;
+  grid-column: 2/3;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu li {
+  padding: 15px 10px 10px 10px;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  font-size: 2.5rem;
+  text-shadow: rgba(0, 0, 0, 0.37) -8px 8px 0 ;
+}
+
+.menu ul,
+.menu li {
+  list-style-type: none;
+  font-size: 2rem;
+  font-family: 'DeaconFlock';
+}
+
+.menu a, .mobile-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* MOBILE */
+
+.hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer
+}
+
+.hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: #f2f2f2;
+  margin: 6px 0;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+  background: #1f1f18;
+  font-size: 30px;
+}
+
+.mobile-menu li {
+  list-style-type: none;
+  font-size: 20px;
+  font-family: 'DeaconFlock';
+}
+@media only screen and (max-width: 750px) {
+  .header nav {
+    display: none;
+  }
+
+  .header .hamburger-icon {
+    justify-self: flex-end;
+    margin-right: 30px;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+/* FOOTER STUFF */
+
+.footer {
+  background: linear-gradient(90deg, rgb(36, 36, 28) 0%, rgba(255, 255, 255, 0) 100%);
+  flex-direction: column;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* ABOUT US STUFF */
+
+.main__about {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.15fr 1fr;
+  justify-content: center;
+  gap: 50px;
+  grid-template-areas: 
+    "title"
+    "content__about";
+}
+
+.title {
+  grid-area: title;
+  margin-top: 2rem;
+  font-size: 5.3rem;
+  height: 2rem;
+  align-items: center;
+  font-family: 'DeaconFlock';
+}
+
+.content__about {
+  grid-area: content__about;
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  align-self: stretch;
+  width: 80%;
+  height: auto;
+  padding: 35px 55px;
+  background: #0d0907;
+  border-radius: 20px;
+  display: flex;  
+  margin-bottom: 50px;
+}
+
+.image__about {
+  align-self: center;
+}
+
+.image__about img {
+  width: 50vh;
+  margin-right: 50px;
+}
+
+hr {
+  color: #252525;
+  height: 80%;
+  align-self: center;
+}
+
+.text__about {
+  margin-left: 50px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text__about p {
+  text-align: left;
+  margin: 5px;
+  font-size: 1.4rem;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .block {
+    flex-direction: column;
+  }
+
+  .text__about {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .image__about img {
+    margin: 0;
+  }
+
+  hr {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .text__about p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .header ul li {
+    font-size: 1.8rem;
+    margin: 15px;
+  }
+
+  .logo {
+    font-size: 3.25rem;
+  }
+
+  .logo:hover {
+    font-size: 3.4rem;
+  }
+
+  .container {
+    grid-template-rows: 50px 1fr 50px;
+  }
+
+  .menu li {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 4px 5px 4px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .menu ul {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 3.3rem;
+  }
+
+  .image__about img {
+    width: 90%;
+  }
+
+  .block {
+    width: 60%;
+  }
+
+  .text__about p {
+    font-size: 1.0rem;
+  }
+}

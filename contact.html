@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NSAYA2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/styles/contactstyle.css">
+  </head>
+  <body>
+    <section class="container">
+      <header class="header">
+        <div class="logo">NSYA2</div>
+        <nav class="menu">
+          <ul>
+            <a href="index.html"><li>Inicio</li></a>
+            <a class="download"><li>Descargar</li></a>
+            <a href="about_us.html"><li>Nosotros</li></a>
+            <a><li>Contacto</li></a>
+          </ul>
+        </nav>
+        <div class="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <a href="index.html"><li>Inicio</li></a>
+            <a class="download"><li>Descargar</li></a>
+            <a href="about_us.html"><li>Nosotros</li></a>
+            <a><li>Contacto</li></a>
+          </ul>
+        </div>
+      </header>
+      <main class="main__contact">
+        <div class="contact__card">
+          <div class="card__stuff">
+            <p class="title">Contactenos</p>
+            <div class="main__card">
+              <span>
+                Número de contacto: 11 9999-9999
+              </span>
+              <span>
+                Correo: contacto@nsaya2.com
+              </span>
+            </div>
+          </div>
+          <div class="card__stuff">
+            <p class="title">Deje su correo</p>
+            <div class="form__card">
+              <form action="">
+                <label name="asunto">Asunto</label>
+                <select id="asuntos" name="asuntos">
+                  <option value="consulta_general">Consulta general</option>
+                  <option value="agregar_servicio">Quiero agregar mi servicio en su página</option>
+                  <option value="uso_indebido">Uno indebido de la aplicación</option>
+                  <option value="consulta_administrativa">Consultas administrativas</option>
+                  <option value="otras_consultas">Otras consultas</option>
+                </select>
+
+                <label name="nombre">Nombre</label>
+                <input name="nombre" type="text">
+
+                <label name="email">Email</label>
+                <input name="email" type="email">
+
+                <label name="mensaje">Mensaje</label>
+                <textarea rows="5" cols="30" placeholder="Mensaje"></textarea>
+                
+                <input id="_submit" value="Enviar" type="submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p>The site has been created and designed by Facundo L. Gaidano.</p>
+        <p>Used for illustration and personal use only for the NSYA2 project. Not commercially available.</p>
+        <p>Form for illustration only, no data will be sent.</p>
+      </footer>
+    </section>
+    <script src="/assets/scripts/formscript.js"></script>
+    <script src="/assets/scripts/randomscript.js"></script>
+    <script src="/assets/scripts/openscript.js"></script>
+  </body>
+</html>

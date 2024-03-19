@@ -75,7 +75,7 @@ button:focus {
 
 @font-face {
   font-family: DeaconFlock;
-  src: url(/assets/fonts/DeaconFlock.ttf);
+  src: url(../fonts/DeaconFlock.ttf);
 }
 
 * {

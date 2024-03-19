@@ -25,3 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 })
+
+const download = document.querySelectorAll('.download')
+
+const pressedDownload = () => {
+  alert('This should sent you to PlayStore or AppStore, depends on you mobile OS')
+}
+
+download.forEach(item => {
+  item.addEventListener('click', pressedDownload)
+})
